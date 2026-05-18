@@ -34,8 +34,7 @@ The bot:
   - [Private Mode](#make-bot-private)
   - [Scalability (Polling vs Webhook)](#scalability-polling-or-webhook)
 - [Localization](#adding-a-new-language)
-- [Languages Contributors](#languages-contributors)
-- [Support Development](#donate)
+
 
 ## Requirements
 
@@ -219,7 +218,7 @@ openssl req -newkey rsa:2048 -sha256 -nodes -keyout private.key -x509 -days 3650
 The bot supports multiple languages through external JSON files. To add a new language:
 
 1. Fork the repository and create a new branch (e.g., `language-support-xx`)
-2. Copy an existing language file from the [language directory](https://github.com/J-Rios/TLG_JoinCaptchaBot/tree/master/src/language)
+2. Copy an existing language file from the [language directory](https://github.com/smartfon2021/Telegram_captcha/tree/master/src/language)
 3. Rename the file to the ISO code of your target language
 4. Translate all text values while maintaining:
    - The JSON structure and key names
