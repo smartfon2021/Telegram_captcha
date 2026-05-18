@@ -1,5 +1,4 @@
-# TLG_JoinCaptchaBot
-[![License](https://img.shields.io/github/license/J-Rios/TLG_JoinCaptchaBot)](https://github.com/J-Rios/TLG_JoinCaptchaBot/blob/master/LICENSE) [![Stars](https://img.shields.io/github/stars/J-Rios/TLG_JoinCaptchaBot)](https://github.com/J-Rios/TLG_JoinCaptchaBot/stargazers) [![Forks](https://img.shields.io/github/forks/J-Rios/TLG_JoinCaptchaBot)](https://github.com/J-Rios/TLG_JoinCaptchaBot/network/members) [![Issues](https://img.shields.io/github/issues/J-Rios/TLG_JoinCaptchaBot)](https://github.com/J-Rios/TLG_JoinCaptchaBot/issues) [![Python](https://img.shields.io/badge/python-3.6+-blue)](https://www.python.org/) [![Telegram](https://img.shields.io/badge/Telegram-Bot-blue?logo=telegram)](https://t.me/join_captcha_bot) [![Maintenance](https://img.shields.io/badge/Maintained-Yes-green)](https://github.com/J-Rios/TLG_JoinCaptchaBot/graphs/commit-activity) [![GitHub last commit](https://img.shields.io/github/last-commit/J-Rios/TLG_JoinCaptchaBot)](https://github.com/J-Rios/TLG_JoinCaptchaBot/commits/master) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](https://github.com/J-Rios/TLG_JoinCaptchaBot/pulls)
+# Telegram_captcha
 
 <p align="left">
     <img width="100%" height="100%" src="https://github.com/user-attachments/assets/eec4ee8b-2734-4d86-985f-53f5f4e752f2">
@@ -67,8 +66,8 @@ sudo apt install -y libtiff5-dev libjpeg62-turbo-dev zlib1g-dev libfreetype6-dev
 ### 3. Get and setup the project
 
 ```bash
-git clone https://github.com/J-Rios/TLG_JoinCaptchaBot
-cd TLG_JoinCaptchaBot
+https://github.com/smartfon2021/Telegram_captcha.git
+cd Telegram_captcha
 make setup
 ```
 
@@ -111,22 +110,22 @@ To run the bot as a daemon service on systemd-based systems:
 1. Create a service file:
 
 ```bash
-sudo nano /etc/systemd/system/tlg_joincaptcha_bot.service
+sudo nano /etc/systemd/system/Telegram_captcha.service
 ```
 
 2. Add the following content (adjust paths as needed):
 
 ```
 [Unit]
-Description=Telegram Join Captcha Bot Daemon
+Description=Telegram captcha Bot Daemon
 Wants=network-online.target
 After=network-online.target
 
 [Service]
 Type=forking
-WorkingDirectory=/path/to/TLG_JoinCaptchaBot/src/
-ExecStart=/path/to/TLG_JoinCaptchaBot/tools/start
-ExecReload=/path/to/TLG_JoinCaptchaBot/tools/kill
+WorkingDirectory=/path/to/Telegram_captcha/src/
+ExecStart=/path/to/Telegram_captcha/tools/start
+ExecReload=/path/to/Telegram_captcha/tools/kill
 
 [Install]
 WantedBy=multi-user.target
@@ -135,14 +134,14 @@ WantedBy=multi-user.target
 3. Enable and start the service:
 
 ```bash
-sudo systemctl enable --now tlg_joincaptcha_bot.service
-sudo systemctl start tlg_joincaptcha_bot.service
+sudo systemctl enable --now Telegram_captcha.service
+sudo systemctl start Telegram_captcha.service
 ```
 
 4. Check service status:
 
 ```bash
-sudo systemctl status tlg_joincaptcha_bot.service
+sudo systemctl status Telegram_captcha.service
 ```
 
 ### Docker
@@ -198,7 +197,7 @@ openssl req -newkey rsa:2048 -sha256 -nodes -keyout private.key -x509 -days 3650
 ```python
 "WEBHOOK_IP": "0.0.0.0",
 "WEBHOOK_PORT": 8443,
-"WEBHOOK_PATH": "/TLG_JoinCaptchaBot",
+"WEBHOOK_PATH": "/Telegram_captcha",
 "WEBHOOK_CERT": SCRIPT_PATH + "/cert.pem",
 "WEBHOOK_CERT_PRIV_KEY": SCRIPT_PATH + "/private.key",
 ```
@@ -206,7 +205,7 @@ openssl req -newkey rsa:2048 -sha256 -nodes -keyout private.key -x509 -days 3650
 3. For reverse proxy setups (optional):
 
 ```python
-"WEBHOOK_URL": "https://example.com:8443/TLG_JoinCaptchaBot"
+"WEBHOOK_URL": "https://example.com:8443/Telegram_captcha"
 ```
 
 4. Enable webhook mode:
@@ -228,32 +227,4 @@ The bot supports multiple languages through external JSON files. To add a new la
    - Special characters (`{}`, `"`, `'`, `\n`, etc.)
 5. Submit a pull request with your translation
 
-## Languages Contributors
 
-- Arabic: [@damascene](https://github.com/damascene)
-- Basque: [@xa2er](https://github.com/xa2er)
-- Belarusian: [@antikruk](https://github.com/antikruk)
-- Catalán: Adela Casals i Jorba
-- Chinese (Mainland): [神林](https://github.com/jyxjjj)
-- Esperanto: Pablo Busto & Porrumentzio
-- Finnish: [Aminda Suomalainen (@Mikaela)](https://github.com/Mikaela)
-- French: [Mathieu H (@aurnytoraink)](https://github.com/Aurnytoraink)
-- Galician: [Fernando Flores (Fer6Flores)](https://github.com/Fer6Flores); Iváns
-- German: [@weerdenburg](https://github.com/weerdenburg), [@MossDerg](https://github.com/MossDerg)
-- Indonesian: ForIndonesian
-- Italian: Noquitt, [Nicola Davide (@nidamanx)](https://github.com/nidamanx)
-- Kannada: [@itsAPK](https://github.com/itsAPK)
-- Korean: [@dakeshi](https://github.com/dakeshi)
-- Persian: [@m4hbod](https://github.com/M4hbod)
-- Portuguese (Brazil): Anahuac de Paula Gil
-- Russian: Unattributed (anonymous), [@stezkoy](https://github.com/Stezkoy), [Roman (@toxi22)](https://github.com/toxi22)
-- Serbo-Croatian: [@IlijaDj](https://github.com/IlijaDj)
-- Slovak: [@dumontiskooo](https://t.me/dumontiskooo)
-- Ukrainian: Vadym Zhushman (@zhushman00), [Roman (@toxi22)](https://github.com/toxi22)
-- Uzbek: [@mhwebuz](https://github.com/mhwebuz)
-
-## Donate
-
-If you find this bot useful, consider supporting the developer:
-
-Paypal: [https://www.paypal.me/josrios](https://www.paypal.me/josrios)
